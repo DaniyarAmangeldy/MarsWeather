@@ -11,6 +11,7 @@ import android.view.ViewGroup
 class WeatherFragment : Fragment() {
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (arguments != null) {
@@ -24,10 +25,12 @@ class WeatherFragment : Fragment() {
     }
 
     companion object {
+        private val KEY_SAMPLE = "sample"
 
         fun newInstance(): WeatherFragment {
             val fragment = WeatherFragment()
             val args = Bundle()
+            args.putString(KEY_SAMPLE,"hello")
             fragment.arguments = args
             return fragment
         }
