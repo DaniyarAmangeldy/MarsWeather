@@ -64,7 +64,6 @@ class WeatherFragment : MvpAppCompatFragment(), WeatherView, AnkoLogger {
 
     override fun showErrorMessage(error: String) {
         toast(error)
-        debug{error}
     }
 
     override fun showLoading() {
