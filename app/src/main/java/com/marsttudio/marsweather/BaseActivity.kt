@@ -5,11 +5,11 @@ import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v7.app.AppCompatActivity
+import com.arellomobile.mvp.MvpAppCompatActivity
 
-/**
- * Created by marsstudio on 13.07.17.
- */
-abstract class BaseActivity: AppCompatActivity() {
+
+abstract class BaseActivity: MvpAppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayout())
