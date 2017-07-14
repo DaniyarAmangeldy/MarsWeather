@@ -3,8 +3,9 @@ package com.marsttudio.marsweather.presentation.weather.presenters
 import com.arellomobile.mvp.InjectViewState
 import com.arellomobile.mvp.MvpPresenter
 import com.marsttudio.marsweather.Application.App
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.domain.weatherInteractor.WeatherInteractor
+import com.marsttudio.marsweather.data.models.Weather
+import com.marsttudio.marsweather.di.weather.WeatherModule
+import com.marsttudio.marsweather.domain.weather.WeatherInteractor
 import com.marsttudio.marsweather.presentation.weather.views.WeatherView
 import javax.inject.Inject
 
@@ -22,7 +23,7 @@ class WeatherPresenter: MvpPresenter<WeatherView>() {
 
     init {
 
-        App.graph.inject(this)
+        App.graph.plus(WeatherModule()).inject(this)
     }
 
     fun loadWeatherList(page: Int = DEFAULT_PAGE) {

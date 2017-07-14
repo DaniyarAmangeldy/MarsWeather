@@ -1,17 +1,16 @@
-package com.marsttudio.marsweather.domain.weatherInteractor
+package com.marsttudio.marsweather.domain.weather
 
-import com.marsttudio.marsweather.WeatherRepository.WeatherRepository
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.data.WeatherResponse
+import com.marsttudio.marsweather.data.repository.weather.WeatherRepository
+import com.marsttudio.marsweather.data.models.Weather
+import com.marsttudio.marsweather.di.weather.WeatherScope
 import io.reactivex.Single
 import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Created by marsstudio on 14.07.17.
  */
 
-@Singleton
+@WeatherScope
 class WeatherInteractorImpl @Inject constructor(val weatherRepository: WeatherRepository): WeatherInteractor {
     override fun loadWeather(page: Int): Single<List<Weather>>{
         return weatherRepository.loadRepositoriesFromApi(page)

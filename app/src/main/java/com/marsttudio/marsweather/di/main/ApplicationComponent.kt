@@ -1,13 +1,15 @@
 package com.marsttudio.marsweather.di.main
 
-import com.marsttudio.marsweather.presentation.weather.presenters.WeatherPresenter
+import com.marsttudio.marsweather.di.main.networkModule.WeatherApiModule
+import com.marsttudio.marsweather.di.weather.WeatherComponent
+import com.marsttudio.marsweather.di.weather.WeatherModule
 import dagger.Component
 import javax.inject.Singleton
 
 
 @Singleton
-@Component(modules = arrayOf(AppModule::class))
+@Component(modules = arrayOf(AppModule::class, WeatherApiModule::class))
 interface ApplicationComponent {
 
-    fun inject(presenter: WeatherPresenter)
+    fun plus(module: WeatherModule): WeatherComponent
 }

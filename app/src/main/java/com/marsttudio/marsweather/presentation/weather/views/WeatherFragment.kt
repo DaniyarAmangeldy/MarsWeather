@@ -9,16 +9,12 @@ import com.arellomobile.mvp.MvpAppCompatFragment
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.PresenterType
 import com.arellomobile.mvp.presenter.ProvidePresenter
-import com.marsttudio.marsweather.Application.App
 import com.marsttudio.marsweather.R
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.domain.weatherInteractor.WeatherInteractor
+import com.marsttudio.marsweather.data.models.Weather
 import com.marsttudio.marsweather.presentation.weather.presenters.WeatherPresenter
 import kotlinx.android.synthetic.main.fragment_weather.*
 import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 import org.jetbrains.anko.support.v4.toast
-import javax.inject.Inject
 
 
 class WeatherFragment : MvpAppCompatFragment(), WeatherView, AnkoLogger {

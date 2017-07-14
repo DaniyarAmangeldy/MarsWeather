@@ -1,7 +1,6 @@
-package com.marsttudio.marsweather.WeatherRepository
+package com.marsttudio.marsweather.data.repository.weather
 
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.data.WeatherResponse
+import com.marsttudio.marsweather.data.models.WeatherResponse
 import io.reactivex.Single
 
 /**

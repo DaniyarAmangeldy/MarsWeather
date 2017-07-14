@@ -1,16 +1,16 @@
-package com.marsttudio.marsweather.WeatherRepository
+package com.marsttudio.marsweather.data.repository.weather
 
 import com.marsttudio.marsweather.data.network.WeatherApi
+import com.marsttudio.marsweather.di.weather.WeatherScope
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
-import javax.inject.Singleton
 
 /**
  * Created by marsstudio on 14.07.17.
  */
 
-@Singleton
+@WeatherScope
 class WeatherRepositoryImpl @Inject constructor(val weatherApi: WeatherApi): WeatherRepository {
 
 

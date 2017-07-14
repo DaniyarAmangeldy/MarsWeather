@@ -1,7 +1,7 @@
 package com.marsttudio.marsweather.presentation.weather.views
 
 import com.arellomobile.mvp.MvpView
-import com.marsttudio.marsweather.data.Weather
+import com.marsttudio.marsweather.data.models.Weather
 
 /**
  * Created by marsstudio on 14.07.17.

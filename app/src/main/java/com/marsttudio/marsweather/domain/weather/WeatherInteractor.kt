@@ -1,7 +1,6 @@
-package com.marsttudio.marsweather.domain.weatherInteractor
+package com.marsttudio.marsweather.domain.weather
 
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.data.WeatherResponse
+import com.marsttudio.marsweather.data.models.Weather
 import io.reactivex.Single
 
 /**

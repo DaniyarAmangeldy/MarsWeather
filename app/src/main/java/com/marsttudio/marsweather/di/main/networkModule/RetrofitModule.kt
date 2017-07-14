@@ -1,4 +1,4 @@
-package com.marsttudio.marsweather.di.main
+package com.marsttudio.marsweather.di.main.networkModule
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -27,7 +27,7 @@ class RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideRetrofitBuilder(client: OkHttpClient,converter:Gson): Retrofit.Builder{
+    fun provideRetrofitBuilder(client: OkHttpClient, converter: Gson): Retrofit.Builder {
         return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create(converter))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -38,10 +38,10 @@ class RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideClient(): OkHttpClient{
+    fun provideClient(): OkHttpClient {
         return OkHttpClient().newBuilder()
-                .connectTimeout(TIMEOUT_SECONDS,TimeUnit.SECONDS)
-                .readTimeout(TIMEOUT_SECONDS,TimeUnit.SECONDS)
+                .connectTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
+                .readTimeout(TIMEOUT_SECONDS, TimeUnit.SECONDS)
                 .build()
     }
 

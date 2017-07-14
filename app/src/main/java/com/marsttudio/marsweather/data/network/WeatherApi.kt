@@ -1,7 +1,6 @@
 package com.marsttudio.marsweather.data.network
 
-import com.marsttudio.marsweather.data.Weather
-import com.marsttudio.marsweather.data.WeatherResponse
+import com.marsttudio.marsweather.data.models.WeatherResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

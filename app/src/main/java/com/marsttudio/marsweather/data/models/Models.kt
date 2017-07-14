@@ -1,4 +1,4 @@
-package com.marsttudio.marsweather.data
+package com.marsttudio.marsweather.data.models
 
 import com.google.gson.annotations.SerializedName
 
