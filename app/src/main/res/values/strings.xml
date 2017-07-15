@@ -1,6 +1,24 @@
 <resources>
-    <string name="app_name">MarsWeather</string>
+    <string name="app_name">Mars Weather</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info.weahter.sol_number" formatted="false">SOL # %s</string>
+    <string name="info.weahter.sol">SOL</string>
+    <string name="info.value.celsius">°C</string>
+    <string name="info.weather.earth_date" formatted="false">Last update %s</string>
+    <string name="info.weather.max_temp" formatted="false">%s°C</string>
+    <string name="info.weather.min_temp" formatted="false">%s</string>
+    <string name="info.weather.pressure" formatted="false">Pressure: %s</string>
+
+    <string name="month.January">January</string>
+    <string name="month.February">February</string>
+    <string name="month.March">March</string>
+    <string name="month.April">April</string>
+    <string name="month.May">May</string>
+    <string name="month.June">June</string>
+    <string name="month.July">July</string>
+    <string name="month.August">August</string>
+    <string name="month.September">September</string>
+    <string name="month.October">October</string>
+    <string name="month.November">November</string>
+    <string name="month.December">December</string>
 </resources>

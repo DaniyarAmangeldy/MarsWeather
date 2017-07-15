@@ -2,6 +2,8 @@ package com.marsttudio.marsweather.presentation.weather.views
 
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +23,12 @@ class WeatherFragment : MvpAppCompatFragment(), WeatherView, AnkoLogger {
 
     @InjectPresenter(type = PresenterType.GLOBAL)
     lateinit var weatherPresenter: WeatherPresenter
+    val rv: RecyclerView by lazy{
+        val rv = recyclerView
+        rv.layoutManager = LinearLayoutManager(context)
+        rv
+        }
+    var weatherAdapter: WeatherAdapter? = null
 
 
 
@@ -55,7 +63,11 @@ class WeatherFragment : MvpAppCompatFragment(), WeatherView, AnkoLogger {
     }
 
     override fun setUpAdapterOrInsertItems(weatherList: List<Weather>) {
-        toast(weatherList.get(0).pressure.toString())
+        if(weatherAdapter == null){
+            weatherAdapter = WeatherAdapter()
+            weatherAdapter?.setWeatherList(weatherList)
+            rv.adapter = weatherAdapter
+        }
     }
 
     override fun showErrorMessage(error: String) {
